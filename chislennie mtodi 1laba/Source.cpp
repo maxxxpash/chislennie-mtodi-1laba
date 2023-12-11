@@ -120,6 +120,7 @@ double FAULTS(int n, double max_new, double max, double* results_2, double* resu
 
 int main()
 {
+	int zex;
 	int n = 3, k = 4;
 	double** arr; char choice;
 	arr = initial(n, k);
