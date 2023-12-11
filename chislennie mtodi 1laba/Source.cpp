@@ -109,9 +109,9 @@ double FAULTS(int n, double max_new, double max, double* results_2, double* resu
 	for (int i = 0; i < n; i++)
 	{
 		vect[i] = results_2[i] - results[i];
-		if (vect[i] > max)
+		if (abs(vect[i]) > abs(max))
 			max = vect[i];
-		if (results[i] > max_new)
+		if (abs(results[i]) > abs(max_new))
 			max_new = results[i];
 	}
 	return abs(max / max_new);
@@ -181,7 +181,7 @@ int main()
 	{
 		F[i] = results_2[i] - results[i];
 		cout << F[i] << '\t';
-		if (F[i] > f_n)
+		if (abs(F[i]) > abs(f_n))
 			f_n = F[i];
 	}
 	cout << endl;
